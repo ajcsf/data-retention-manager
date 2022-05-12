@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <title>Data Retention Manager - Error</title>  
+    <link href="../assets/styles.css" rel="stylesheet">       
+</head>
+
+<body>    
+<div id="container">  
+    <div class="vertical-centre">
+        <div id="content" style="position: relative; width:300px; margin: 0 auto;"> 
+            <h1>Error!</h1>
+            <p>Something has gone wrong.</p>      
+            <% if(locals.errorTitle !== undefined){ %>
+                    <h3 class="error-title"> <%= locals.errorTitle %></h3>
+                <% } %>
+                <% if(locals.errorMsg !== undefined){ %>
+                    <p class="error-message"> <%= locals.errorMsg %></p>
+                <% } %>
+                <p><a class="go-back" href="./">Click here</a></p>
+        </div>   
+    </div>
+</div>    
+</body>
+</html>

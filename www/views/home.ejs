@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">    
+    <title>Data Retention Manager</title>  
+    <link href="../assets/styles.css" rel="stylesheet">     
+</head>
+
+<body>
+
+<div id="container">
+    
+    <div class="page-header">
+        <div class="page-title">
+            <h1>Data Retention Manager</h1>
+            <p>for Salesforce Privacy Center</p>
+        </div>
+        <div id="logout-link">
+            <button class="red-button" id="logout-button" onclick="logout();">Logout</button>
+         </div>
+    </div>
+    
+        <div class="clear"></div>
+    <div id="schedule-section" class="card">            
+       <div class="time-current">
+           Currently scheduled time to run is: <span id="time-text"></span>
+        </div>
+        <div class="time-button-group">
+            <button class="neutral-button" id="edit-time-button" onclick="editScheduledTime();">Edit Schedule</button>                
+        </div>
+        <div class="clear"></div>
+       <div id="time-edit-controls">
+             <div class="time-edit-selectors">
+                 <select id="time-sel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>       
+            </select>
+            <select id="am-pm-sel">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>        
+            </select></div>
+            <div class="edit-time-cancel-confirm-button-group">
+                <button class="brand-button" id="save-time-button" onclick="setScheduledTime()">Set Schedule</button>
+                <button class="neutral-button" id="cancel-edit-time-button" onclick="cancelEditTimeChange();">Cancel</button>
+            </div>
+            <div class="clear"></div>
+        </div>                              
+        <div class="clear"></div> 
+    </div>
+    
+    <div id="tables-section" class="card">  
+        <div class="table-button-group"> 
+            <button class="neutral-button" id="edit-button" onclick="editTableSelection();">Edit Selection</button>
+        </div>
+       <div class="search-controls">
+            <input onsearch="search()"  size="40" id="search-input" type="search" class="text-input" />       
+            <button class="brand-button" onclick="search()">Search</button>
+        </div>
+        <div class="clear"></div>
+        <div id="contents">
+            <div id="alist">
+                <!-- will be populated //-->
+            </div>       
+            <div  id="table-cancel-confirm-button-group" class="table-cancel-confirm-button-group">
+                <button class="brand-button" id="save-button" onclick="saveTableSelection();">Save Selection</button>
+                <button class="neutral-button" id="cancel-button" onclick="cancelEditTableSelection();">Cancel</button></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>    
+    
+<div id="spinner"></div>
+<div id="error-modal">
+    <div class="vertical-centre">
+        <div id="content" style="position: relative; width:300px; margin: 0 auto;"> 
+            <h1>Error!</h1>
+            <p>Something has gone wrong.</p>   
+            <p>Reload the page to start again.</p>   
+        </div>   
+    </div>
+</div>
+<div id="success-modal">
+    <div class="vertical-centre">
+        <div id="content" style="position: relative; width:300px; margin: 0 auto;"> 
+            <div onclick="hideSuccessModal();" id="success-modal-close-button">X</div>        
+            <h1>Success!</h1>
+            <p>Changes have been saved.</p>               
+        </div>   
+    </div>
+</div>
+<script src="../scripts/app.js">
+    
+</script>
+<script>
+    initData();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+app.json
+node_modules
+certs
+.env
+.idea
+.DS_Store
+mynotes.txt

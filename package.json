@@ -1,0 +1,26 @@
+{
+  "name": "ajc-pc-delete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex.conway@salesforce.co",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bull": "^4.7.0",
+    "connect-redis": "^6.1.2",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "node-schedule": "^2.1.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.3",
+    "pg-format": "^1.0.4",
+    "redis": "^4.0.4",
+    "uuid-random": "^1.3.2"
+  }
+}
